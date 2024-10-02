@@ -8,6 +8,5 @@ GRANT ALL PRIVILEGES ON kitchen_pantry.* TO 'spices_manager'@'localhost';
 USE kitchen_pantry;
 
 SOURCE create-user-defined-variables.sql;
-
 SOURCE create-spices-table.sql;
 SOURCE populate-spices-table.sql;
