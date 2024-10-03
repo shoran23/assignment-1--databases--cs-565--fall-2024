@@ -12,3 +12,4 @@ SOURCE create-spices-table.sql;
 SOURCE populate-spices-table.sql;
 
 SOURCE create-stores-table.sql;
+SOURCE populate-stores-table.sql;
