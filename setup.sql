@@ -10,3 +10,5 @@ USE kitchen_pantry;
 SOURCE create-user-defined-variables.sql;
 SOURCE create-spices-table.sql;
 SOURCE populate-spices-table.sql;
+
+SOURCE create-stores-table.sql;
