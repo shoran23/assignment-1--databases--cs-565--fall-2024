@@ -9,5 +9,6 @@
 -- Get spices whose names are also brands. For example, Fresh Direct is a store that also makes spices.
 
 -- Get spices whose names contain “cinnamon”.
+SELECT * FROM spices WHERE UPPER(SPICE_NAME) LIKE UPPER("%cinnamon%");
 
 -- Get the brand name of the Sumac spice and the name and URL of the store where it was purchased.

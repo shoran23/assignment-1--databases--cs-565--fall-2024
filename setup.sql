@@ -19,3 +19,6 @@ SOURCE populate-stores-table.sql;
 SOURCE create-store-addresses-table.sql;
 SOURCE populate-store-addresses-table.sql;
 
+-- add the spice purchase table
+SOURCE create-spice-purchases-table.sql;
+SOURCE populate-spice-purchases-table.sql;

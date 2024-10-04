@@ -1,0 +1,1 @@
+SELECT physical_address, url_address FROM store_addresses INNER JOIN stores USING (store_id);
