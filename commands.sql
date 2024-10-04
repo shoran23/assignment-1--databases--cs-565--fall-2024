@@ -3,6 +3,7 @@
 -- Get the name of the store and its URL where spices were purchased, including their barcode.
 
 -- Get stores who only have an online address.
+ SELECT store_name, store_id, comment FROM stores INNER JOIN store_addresses using (store_id) WHERE store_addresses.physical_address IS NULL;
 
 -- Get stores who have an online and a physical address.
 
