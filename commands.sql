@@ -6,6 +6,7 @@
  SELECT store_name, store_id, comment FROM stores INNER JOIN store_addresses using (store_id) WHERE store_addresses.physical_address IS NULL;
 
 -- Get stores who have an online and a physical address.
+SELECT store_name, store_id, comment FROM stores INNER JOIN store_addresses using (store_id) WHERE store_addresses.physical_address IS NOT NULL AND store_addresses.url_address IS NOT NULL;
 
 -- Get spices whose names are also brands. For example, Fresh Direct is a store that also makes spices.
 
