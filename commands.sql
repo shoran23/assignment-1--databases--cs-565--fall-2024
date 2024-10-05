@@ -15,7 +15,6 @@ JOIN
 
 
 
-
 -- Get the name of the store and its URL where spices were purchased, including their barcode.
 SELECT DISTINCT
     store_name,
@@ -92,4 +91,20 @@ WHERE UPPER(SPICE_NAME) LIKE UPPER("%cinnamon%");
 
 
 -- Get the brand name of the Sumac spice and the name and URL of the store where it was purchased.
-
+SELECT
+    brand,
+    store_name,
+    url_address
+FROM
+    spices
+JOIN
+    spice_purchases
+    USING(barcode)
+JOIN
+    stores
+    USING(store_id)
+JOIN
+    store_addresses
+    USING(store_id)
+WHERE
+    spice_name="Sumac";

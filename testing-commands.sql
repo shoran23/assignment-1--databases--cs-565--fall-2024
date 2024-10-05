@@ -1,6 +1,17 @@
 SELECT
-    brand
+    brand,
+    store_name,
+    url_address
 FROM
     spices
+JOIN
+    spice_purchases
+    USING(barcode)
+JOIN
+    stores
+    USING(store_id)
+JOIN
+    store_addresses
+    USING(store_id)
 WHERE
     spice_name="Sumac";
