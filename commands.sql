@@ -1,13 +1,23 @@
+-- Determine what join type is more optimal
+        -- should use INNER join or NATURAL JOIN
+        -- work on the difference between Product and Cross product (NATURAL JOIN or CROSS JOIN)
+        -- take a look at the differences in product when using the different joins to combine the tables
+        -- determine which ones will be more efficient for this type of application
+-- be sure to use dot syntax to specify table columns as needed
+-- go through all examples and double-check the result to the provided data
+
+
+
 -- Get the name of the store and its URL where any spices were purchased.
 SELECT DISTINCT
     store_name,
     url_address
 FROM
     stores
-JOIN
+NATURAL JOIN
     store_addresses
     USING(store_id)
-JOIN
+NATURAL JOIN
     spice_purchases
     USING(store_id);
 
@@ -28,6 +38,8 @@ JOIN
 JOIN
     spice_purchases
     USING(store_id);
+
+
 
 
 
