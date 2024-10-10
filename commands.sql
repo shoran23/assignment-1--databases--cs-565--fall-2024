@@ -1,13 +1,3 @@
--- Determine what join type is more optimal
-        -- should use INNER join or NATURAL JOIN
-        -- work on the difference between Product and Cross product (NATURAL JOIN or CROSS JOIN)
-        -- take a look at the differences in product when using the different joins to combine the tables
-        -- determine which ones will be more efficient for this type of application
--- be sure to use dot syntax to specify table columns as needed
--- go through all examples and double-check the result to the provided data
-
-
-
 -- Get the name of the store and its URL where any spices were purchased.
 SELECT DISTINCT
     store_name,
@@ -16,12 +6,8 @@ FROM
     stores
 NATURAL JOIN
     store_addresses
-    USING(store_id)
 NATURAL JOIN
-    spice_purchases
-    USING(store_id);
-
-
+    spice_purchases;
 
 
 
@@ -32,14 +18,10 @@ SELECT DISTINCT
     barcode
 FROM
     stores
-JOIN
+NATURAL JOIN
     store_addresses
-    USING(store_id)
-JOIN
-    spice_purchases
-    USING(store_id);
-
-
+NATURAL JOIN
+    spice_purchases;
 
 
 
@@ -51,9 +33,8 @@ JOIN
     comment
  FROM
      stores
-JOIN
+NATURAL JOIN
     store_addresses
-    USING(store_id)
  WHERE
      store_addresses.physical_address IS NULL;
 
@@ -67,9 +48,8 @@ SELECT
     comment
 FROM
     stores
-JOIN
+NATURAL JOIN
     store_addresses
-    USING(store_id)
 WHERE
     store_addresses.physical_address IS NOT NULL AND store_addresses.url_address IS NOT NULL;
 
@@ -83,10 +63,10 @@ SELECT DISTINCT
     brand
 FROM
     stores
-JOIN
+CROSS JOIN
     spices
 WHERE
-    store_name=brand;
+    stores.store_name=brand;
 
 
 
@@ -109,14 +89,14 @@ SELECT
     url_address
 FROM
     spices
-JOIN
+CROSS JOIN
     spice_purchases
     USING(barcode)
-JOIN
+CROSS JOIN
     stores
     USING(store_id)
-JOIN
+CROSS JOIN
     store_addresses
     USING(store_id)
 WHERE
-    spice_name="Sumac";
+    spices.spice_name="Sumac";
