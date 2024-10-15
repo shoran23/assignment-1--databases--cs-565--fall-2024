@@ -80,8 +80,6 @@ WHERE UPPER(SPICE_NAME) LIKE UPPER("%cinnamon%");
 
 
 
-
-
 -- Get the brand name of the Sumac spice and the name and URL of the store where it was purchased.
 SELECT
     brand,
