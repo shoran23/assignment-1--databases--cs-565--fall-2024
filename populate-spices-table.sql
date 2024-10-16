@@ -40,7 +40,7 @@ VALUES
     ('Celery Salt',                          2,     @KAMMENSTEIN,          '21'),
     ('Hot Mexican-Style Chili Powder',       2.5,   @MCCORMICK,            '05243217'),
     ('Basil Leaves',                          .62,  @MCCORMICK,            '05269613'),
-    ('Ground Cloves',                         .9,   @MCCORMICK,            '522331'),
+    ('Ground Cloves',                          .9,   @MCCORMICK,            '522331'),
     ('Pumpkin Pie Spice',                    1.12,  @MCCORMICK,            '522641'),
     ('Paprika',                              1,     @MCCORMICK,            '05225716'),
     ('Black Peppercorn Grinder',             1.24,  @MCCORMICK,            '052100746036'),
